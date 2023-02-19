@@ -1,6 +1,6 @@
 # JobsSpot
 
-●Searches real aggregated job posting from the J search API.
+●Searches real aggregated job postings from the J search API.
 
 ●Allows users to naviagate to various websites where postings are hosted.
 
