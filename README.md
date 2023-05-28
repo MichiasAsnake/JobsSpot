@@ -5,24 +5,37 @@
 
 I created JobsSpot when going through the interview process for my first internship. The industry of the company I work for is job market data, so I thought it would be a great idea to create a job board that sources job listings from different major job sites. JobsSpot utilizes the JSearchAPI for its job listings and allows users to search for individual positions based on job type and location. Once you have found the perfect position, you can then click and be sent to the website where the job is being hosted and apply.
 
+### Prerequisites
+
+Node (https://nodejs.org/en/download)
+
 ## Installing / Getting started
 
-A quick introduction of the minimal setup you need to get a hello world up &
-running.
+A quick introduction of the minimal setup you need to get started.
+
+1. Clone the repository.
 
 ```shell
-commands here
+git clone [<repository-url>](https://github.com/MichiasAsnake/JobsSpot)
 ```
+2. Navigate to the Project Directory.
 
-Here you should say what actually happens when you execute the code above.
+```shell
+cd JobsSpot
+```
+3. Navigate to the Project Directory.
 
+```shell
+npm install
+```
+4. Navigate to the Project Directory.
+
+```shell
+npm run dev
+```
 ## Developing
 
 ### Built With
 React, Javascript, Vite, HTML, CSS
-
-### Prerequisites
-
-Node (https://nodejs.org/en/download)
 
 ![JobsSpot](https://user-images.githubusercontent.com/113400872/212501752-f9105e31-a582-4cc3-9d58-b374e79753a7.PNG)
