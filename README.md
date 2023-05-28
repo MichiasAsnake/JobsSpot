@@ -16,7 +16,7 @@ A quick introduction of the minimal setup you need to get started.
 1. Clone the repository.
 
 ```shell
-git clone [<repository-url>](https://github.com/MichiasAsnake/JobsSpot)
+git clone https://github.com/MichiasAsnake/JobsSpot
 ```
 2. Navigate to the Project Directory.
 
