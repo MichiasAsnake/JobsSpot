@@ -1,12 +1,28 @@
-# JobsSpot
+<img src="./images/logo.sample.png" alt="Logo of the project" align="right">
 
-I created JobsSpot when going through the interview process for my first internship. The industry of the company I work for is job market data, so I thought it would be a great idea to create a job board that sources job listings from different major job sites. JobsSpot utilizes the JSearchAPI for its job listings and allows users to search for individual positions based on job type and location. Once you have found the perfect position, you can then click and be sent to the website where the job is being hosted and apply. 
+# JobSpot &middot; [![Build Status](https://img.shields.io/travis/npm/npm/latest.svg?style=flat-square)](https://travis-ci.org/npm/npm) [![npm](https://img.shields.io/npm/v/npm.svg?style=flat-square)](https://www.npmjs.com/package/npm) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com) [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://github.com/your/your-project/blob/master/LICENSE)
+> Additional information or tag line
 
-●Searches real aggregated job postings from the J search API.
+I created JobsSpot when going through the interview process for my first internship. The industry of the company I work for is job market data, so I thought it would be a great idea to create a job board that sources job listings from different major job sites. JobsSpot utilizes the JSearchAPI for its job listings and allows users to search for individual positions based on job type and location. Once you have found the perfect position, you can then click and be sent to the website where the job is being hosted and apply.
 
-●Allows users to naviagate to various websites where postings are hosted.
+## Installing / Getting started
 
-●Shows accurate job details, qualifications, and descriptions for every result.
+A quick introduction of the minimal setup you need to get a hello world up &
+running.
 
+```shell
+commands here
+```
+
+Here you should say what actually happens when you execute the code above.
+
+## Developing
+
+### Built With
+React, Javascript, Vite, HTML, CSS
+
+### Prerequisites
+
+Node (https://nodejs.org/en/download)
 
 ![JobsSpot](https://user-images.githubusercontent.com/113400872/212501752-f9105e31-a582-4cc3-9d58-b374e79753a7.PNG)
