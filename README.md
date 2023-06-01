@@ -21,12 +21,12 @@ git clone https://github.com/MichiasAsnake/JobsSpot
 ```shell
 cd JobsSpot
 ```
-3. Navigate to the Project Directory.
+3. Save packages.
 
 ```shell
 npm install
 ```
-4. Navigate to the Project Directory.
+4. Open project in browser.
 
 ```shell
 npm run dev
