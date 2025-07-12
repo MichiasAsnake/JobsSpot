@@ -1,11 +1,9 @@
-
-
 :root {
-  font-family: 'Yorkten NorReg';
+  font-family: "Yorkten NorReg";
   font-size: 16px;
   line-height: 22px;
   font-weight: 400;
-  
+
   color-scheme: light dark;
   color: #2d2d2d;
   background-color: #faf9f8;
@@ -19,38 +17,43 @@
 }
 
 @font-face {
-  font-family: 'Yorkten NorReg';
+  font-family: "Yorkten NorReg";
   src: url(./fonts/Yorkten-NorReg.ttf);
 }
 @font-face {
-  font-family: 'Yorkten NorMed';
+  font-family: "Yorkten NorMed";
   src: url(./fonts/Yorkten-NorMed.ttf);
 }
 @font-face {
-  font-family: 'Yorkten NorDem';
+  font-family: "Yorkten NorDem";
   src: url(./fonts/Yorkten-NorDem.ttf);
 }
-.feedContainer{
+.feedContainer {
   display: flex;
   flex-direction: column;
-  width: 1000px;
+  width: 100%;
+  max-width: 1000px;
   margin: -20px auto;
   justify-content: center;
-  align-items:baseline;
+  align-items: baseline;
   position: relative;
   position: sticky;
-  
+  padding: 0 10px;
+  box-sizing: border-box;
 }
 
-.jobDetailsContainer{
+.jobDetailsContainer {
   display: flex;
   justify-content: flex-end;
-  
+  width: 100%;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
 /* search bars */
-.searchBar{
-  width:350px;
+.searchBar {
+  width: 350px;
+  max-width: 100%;
   border: solid #8f8f8f 1.5px;
   border-radius: 10px;
   padding: 12px;
@@ -58,96 +61,121 @@
   background-color: white;
   color: black;
   font-size: 15px;
+  box-sizing: border-box;
 }
 
-.searchContainer{
+.searchContainer {
   display: flex;
   width: 100vw;
-  justify-content:center;
+  justify-content: center;
   flex-direction: row;
   align-items: center;
   margin: 0 0 25px 0;
-  background-color: #ffff ;
+  background-color: #ffff;
   border-top: solid 1px #d4d2d0;
-  border-bottom: solid 1px #d4d2d0;;
-  
-  padding: 40px 0px; 
+  border-bottom: solid 1px #d4d2d0;
+  padding: 40px 0px;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
-.findJobsButton{
+.findJobsButton {
   width: 100px;
   height: 45px;
   border-radius: 10px;
   background-color: #2557a7;
-  font-family:'Yorkten NorMed';
+  font-family: "Yorkten NorMed";
   font-size: 16px;
   color: white;
   border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.findJobsButton:hover {
+  background-color: #1e4a8a;
+}
+
+.findJobsButton:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.findJobsButton:disabled:hover {
+  background-color: #cccccc;
+}
+
+/* Disabled search bar styling */
+.searchBar:disabled {
+  background-color: #f5f5f5;
+  color: #999;
+  cursor: not-allowed;
 }
 
 /*job listing*/
 
-.jobListing{
+.jobListing {
   border: solid 1px #d4d2d0;
   border-radius: 10px;
   width: 380px;
+  max-width: 100%;
   padding: 3px 15px 5px 15px;
   background-color: white;
   font-size: 12.5px;
   height: fit-content;
   overflow: hidden;
-  position:relative;
-  
-}
-.jobListing:hover{
-  cursor: pointer;
+  position: relative;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
-.jobDescriptionStyle,.jobDetailScroll{
+.jobListing:hover {
+  cursor: pointer;
+  border-color: #2557a7;
+  box-shadow: 0 2px 8px rgba(37, 87, 167, 0.1);
+}
+
+.jobDescriptionStyle,
+.jobDetailScroll {
   font-size: 15px;
 }
 
-.jobDetailScroll{
+.jobDetailScroll {
   overflow-y: scroll;
   width: fit-content;
   position: relative;
-  
+
   height: 670px;
   padding: 0 12px;
-  margin-top:0px;
+  margin-top: 0px;
   margin-bottom: 10px;
 }
 
-.jobDescriptionStyleC{
- 
+.jobDescriptionStyleC {
   height: 50%;
   margin: 10px 10px 18px -26px;
-  color:#868686;
+  color: #868686;
   list-style-type: circle;
-  
 }
-.jobDescriptionStyleD{
- 
+.jobDescriptionStyleD {
   height: 50%;
   margin: 10px 10px 18px -26px;
-  
-  
 }
 
-.icon{
+.icon {
   margin: 0;
 }
 
-.jobListingContainer{
+.jobListingContainer {
   display: flex;
-  margin:0 auto;
+  margin: 0 auto;
   width: 80%;
   padding: 10px;
   height: fit-content;
-  
 }
 
-.jobType{
+.jobType {
   background-color: #e4f7e6;
   width: fit-content;
   padding: 0 5px;
@@ -157,18 +185,17 @@
   font-weight: bold;
   display: flex;
   justify-content: center;
-  gap:5px;
-  
+  gap: 5px;
 
-  color: #1f662c ;
-  
+  color: #1f662c;
 }
 
 /*job Detail*/
 
-.detailContainer{
+.detailContainer {
   border: solid 1px #d4d2d0;
   min-width: 540px;
+  max-width: 600px;
   width: 20vw;
   height: 94vh;
   background-color: white;
@@ -176,26 +203,25 @@
   padding: 3px 0px 5px 15px;
   position: -webkit-sticky;
   position: sticky;
-  float: right; 
+  float: right;
   position: absolute;
+  overflow: hidden;
 }
 
-.scrollContainer{
- 
+.scrollContainer {
   overflow-y: scroll;
   scrollbar-width: none; /* Firefox */
-  
+
   height: 100vh;
-  margin-top:22px;
-  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  margin-top: 22px;
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
 }
 
-.scrollContainer::-webkit-scrollbar { 
-  display: none;  /* Safari and Chrome */
+.scrollContainer::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
 }
 
-.stationaryContainer{
-  
+.stationaryContainer {
   position: fixed;
   top: 13px;
   left: -8vw;
@@ -204,48 +230,532 @@
   position: absolute;
   width: fit-content;
   float: right;
- 
+
   padding: 10px;
   margin: 30px auto;
-  
 }
 
-.applyButton{
+.applyButton {
   background-color: #2557a7;
   border: none;
   color: white;
   margin-top: 15px;
   border-radius: 10px;
-  vertical-align:auto;
+  vertical-align: auto;
   padding: 10px;
   font-size: 15px;
   height: 40px;
-  font-family:'Yorkten NorMed';
+  font-family: "Yorkten NorMed";
   font-weight: bold;
   width: fit-content;
   cursor: pointer;
+  word-wrap: break-word;
+  white-space: normal;
 }
 
-.jobTypeContainer{
-  display:flex;
-  gap:10px;
+.jobTypeContainer {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
 }
 
-@media only screen and (max-width: 1649px) {
-  .searchContainer{
-    flex-direction: column;
-    
+.jobDetailScroll {
+  overflow-y: scroll;
+  width: 100%;
+  position: relative;
+  height: 670px;
+  padding: 0 12px;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.jobDescriptionStyle,
+.jobDetailScroll {
+  font-size: 15px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.jobDescriptionStyleD {
+  height: 50%;
+  margin: 10px 10px 18px -26px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+}
+
+/* Responsive Design - Mobile First Approach */
+
+/* Large Desktop (1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .feedContainer {
+    width: 1000px;
+    margin: -20px auto;
   }
-  .searchBar{
-    width: 93%;
+
+  .detailContainer {
+    width: 20vw;
+    min-width: 540px;
+    max-width: 600px;
+  }
+
+  .jobListing {
+    width: 380px;
+  }
+
+  .searchBar {
+    width: 350px;
+  }
+}
+
+/* Desktop (992px to 1199px) */
+@media only screen and (max-width: 1199px) and (min-width: 992px) {
+  .feedContainer {
+    width: 90%;
+    margin: -20px auto;
+  }
+
+  .detailContainer {
+    width: 25vw;
+    min-width: 400px;
+    max-width: 500px;
+  }
+
+  .jobListing {
+    width: 320px;
+  }
+
+  .searchBar {
+    width: 300px;
+  }
+}
+
+/* Tablet Landscape (768px to 991px) */
+@media only screen and (max-width: 991px) and (min-width: 768px) {
+  .feedContainer {
+    width: 95%;
+    margin: -20px auto;
+    flex-direction: column;
+  }
+
+  .jobDetailsContainer {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .detailContainer {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    min-width: auto;
+    height: auto;
+    max-height: 70vh;
+    margin: 20px auto;
+  }
+
+  .jobListing {
+    width: 100%;
+    max-width: 500px;
+  }
+
+  .searchContainer {
+    flex-direction: column;
+    padding: 20px 0px;
+  }
+
+  .searchBar {
+    width: 80%;
     margin: 10px;
   }
-  .feedContainer{
-    justify-content: center;
+
+  .stationaryContainer {
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    width: 100%;
+    float: none;
+    padding: 0;
+    margin: 0;
   }
-  .detailContainer{
-    display: none;
+}
+
+/* Tablet Portrait (481px to 767px) */
+@media only screen and (max-width: 767px) and (min-width: 481px) {
+  .feedContainer {
+    width: 100%;
+    margin: -20px auto;
+    flex-direction: column;
   }
 
-  
+  .jobDetailsContainer {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+    padding: 5px;
+  }
+
+  .detailContainer {
+    position: relative;
+    width: 95%;
+    max-width: none;
+    min-width: auto;
+    height: auto;
+    max-height: 60vh;
+    margin: 15px auto;
+  }
+
+  .jobListing {
+    width: 95%;
+    max-width: 450px;
+    font-size: 11px;
+  }
+
+  .searchContainer {
+    flex-direction: column;
+    padding: 15px 0px;
+  }
+
+  .searchBar {
+    width: 85%;
+    margin: 8px;
+    font-size: 14px;
+  }
+
+  .findJobsButton {
+    width: 90px;
+    height: 40px;
+    font-size: 14px;
+  }
+
+  .stationaryContainer {
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    width: 100%;
+    float: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .jobDetailScroll {
+    height: 50vh;
+    padding: 0 8px;
+  }
+
+  .jobDescriptionStyle,
+  .jobDetailScroll {
+    font-size: 14px;
+  }
+}
+
+/* Mobile (320px to 480px) */
+@media only screen and (max-width: 480px) {
+  .feedContainer {
+    width: 100%;
+    margin: -10px auto;
+    flex-direction: column;
+  }
+
+  .jobDetailsContainer {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    padding: 5px;
+  }
+
+  .detailContainer {
+    position: relative;
+    width: 95%;
+    max-width: none;
+    min-width: auto;
+    height: auto;
+    max-height: 50vh;
+    margin: 10px auto;
+    padding: 3px 0px 5px 10px;
+  }
+
+  .jobListing {
+    width: 95%;
+    max-width: 350px;
+    font-size: 10px;
+    padding: 3px 10px 5px 10px;
+  }
+
+  .searchContainer {
+    flex-direction: column;
+    padding: 10px 0px;
+    margin: 0 0 15px 0;
+  }
+
+  .searchBar {
+    width: 90%;
+    margin: 5px;
+    font-size: 13px;
+    padding: 10px;
+  }
+
+  .findJobsButton {
+    width: 80px;
+    height: 35px;
+    font-size: 13px;
+  }
+
+  .stationaryContainer {
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    width: 100%;
+    float: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .jobDetailScroll {
+    height: 40vh;
+    padding: 0 5px;
+  }
+
+  .jobDescriptionStyle,
+  .jobDetailScroll {
+    font-size: 13px;
+  }
+
+  .applyButton {
+    font-size: 13px;
+    height: 35px;
+    padding: 8px;
+  }
+
+  .jobType {
+    font-size: 11px;
+    padding: 0 4px;
+    margin-top: 8px;
+  }
+
+  /* Adjust header for mobile */
+  header h1 {
+    font-size: 24px;
+    padding: 8px 0 8px 10px;
+  }
+
+  /* Welcome message adjustment */
+  .welcome-message {
+    width: 90vw !important;
+    font-size: 18px !important;
+    margin: 20px auto !important;
+  }
+}
+
+/* Extra Small Mobile (below 320px) */
+@media only screen and (max-width: 319px) {
+  .feedContainer {
+    width: 100%;
+    margin: -5px auto;
+  }
+
+  .jobListing {
+    width: 98%;
+    font-size: 9px;
+    padding: 2px 8px 4px 8px;
+  }
+
+  .searchBar {
+    width: 95%;
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  .detailContainer {
+    width: 98%;
+    padding: 2px 0px 4px 8px;
+  }
+
+  .jobDetailScroll {
+    height: 35vh;
+    padding: 0 3px;
+  }
+
+  .jobDescriptionStyle,
+  .jobDetailScroll {
+    font-size: 12px;
+  }
+
+  header h1 {
+    font-size: 20px;
+    padding: 6px 0 6px 8px;
+  }
+}
+
+/* Landscape orientation adjustments for mobile */
+@media only screen and (max-height: 500px) and (orientation: landscape) {
+  .detailContainer {
+    max-height: 80vh;
+  }
+
+  .jobDetailScroll {
+    height: 60vh;
+  }
+
+  .searchContainer {
+    padding: 10px 0px;
+  }
+}
+
+/* High DPI displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .jobListing {
+    border-width: 0.5px;
+  }
+
+  .detailContainer {
+    border-width: 0.5px;
+  }
+}
+
+/* Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+  .jobListing:hover {
+    transition: none;
+  }
+
+  .applyButton:hover {
+    transition: none;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  :root {
+    color: #ffffff;
+    background-color: #1a1a1a;
+  }
+
+  .jobListing,
+  .detailContainer {
+    background-color: #2d2d2d;
+    border-color: #404040;
+  }
+
+  .searchBar {
+    background-color: #2d2d2d;
+    color: #ffffff;
+    border-color: #404040;
+  }
+}
+
+/* Touch-friendly improvements for mobile */
+@media (hover: none) and (pointer: coarse) {
+  .jobListing {
+    min-height: 60px;
+  }
+
+  .applyButton {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  .findJobsButton {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  .searchBar {
+    min-height: 44px;
+  }
+}
+
+/* Smooth scrolling for better UX */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Prevent horizontal scroll on mobile */
+body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* Better focus states for accessibility */
+.jobListing:focus,
+.applyButton:focus,
+.findJobsButton:focus,
+.searchBar:focus {
+  outline: 2px solid #2557a7;
+  outline-offset: 2px;
+}
+
+/* Loading state improvements */
+.jobListing {
+  transition: all 0.3s ease;
+}
+
+.jobListing:active {
+  transform: scale(0.98);
+}
+
+/* Loading state styles */
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+  width: 100%;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.loading-text {
+  font-family: "Yorkten NorMed";
+  color: #2557a7;
+  font-size: 18px;
+  text-align: center;
+}
+
+/* Responsive loading styles */
+@media only screen and (max-width: 480px) {
+  .loading-container {
+    min-height: 150px;
+    gap: 15px;
+  }
+
+  .loading-text {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .loading-container {
+    min-height: 120px;
+    gap: 10px;
+  }
+
+  .loading-text {
+    font-size: 14px;
+  }
+}
+
+/* Responsive typography */
+@media only screen and (max-width: 480px) {
+  :root {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  :root {
+    font-size: 13px;
+    line-height: 18px;
+  }
 }
